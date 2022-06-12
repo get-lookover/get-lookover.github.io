@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="google-site-verification" content="gJC5gT8VPn7OLhjK-LP4Vr6BbGZ46MFfcV1nfSMLwEw" />
+	<meta name="googlebot" content="Get Lookover v0.1" />
+	<meta name="description" content="Get Lookover is an open source CSS/JS framework for designing modern websites Faster and easly"/>
+	<meta name="robots" content="index">
+	
+	<link rel="canonical" href=”http://get-lookover.github.io/index.html" />
+	<!-- Google Tag Manager -->
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({
+				'gtm.start': new Date().getTime(),
+				event: 'gtm.js'
+			});
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != 'dataLayer' ? '&l=' + l : '';
+			j.async = true;
+			j.src =
+				'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-W8GWR4D');
+	</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-7QZHH3NCNF"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'G-7QZHH3NCNF');
+	</script>
+	<!-- End Google Tag Manager -->
+	<title>Get lookover</title>
+	<!-- <link rel="stylesheet" href="css/getlookover.css"> -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/get-lookover/cdn/get-lookover-v0.1/css/get-lookover.min.css">
+  	<link rel="stylesheet" href="/css/style.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/get-lookover/cdn/get-lookover-v0.1/js/get-lookover.min.js"></script>
+</head>
+
+<body class="col-space-03-em">
+	
+	<header class="navbar right-navbar display-container color-dark-bg sticky" id="navbar">
+		<script>
+			$("header").load("header.html");
+		</script>
+	</header>
+	
+	<section class="bodySections color-light-text">
+		<script>
+			$("section").load("v01.html");
+		</script>	
+	</section>
+
+	<footer class="color-dark-bg cols-container padding-16 col-space-03-em">
+		<script>
+			$("footer").load("footer.html");
+		</script>
+	</footer>
+
+
+
+	<div id="snackbar-01">Current Version 0.1</div>
+	<div id="snackbar-02">Version 0.2</div>
+	<div id="snackbar-03">Version 0.3</div>
+	<div id="snackbar-04">Version 0.4</div>
+
+
+	<script>
+		function loadSection01(){
+			$("section").load("v01.html");
+			var x = document.getElementById("snackbar-01");
+			x.className = "show";
+			setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+			$(".version").text("Current v0.1");
+		}
+		function loadSection02(){
+			$("section").load("v02.html");
+			var x = document.getElementById("snackbar-02");
+			x.className = "show";
+			setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+			$(".version").text("Version 0.2");
+		}
+		function loadSection03(){
+			$("section").load("v03.html");
+			var x = document.getElementById("snackbar-03");
+			x.className = "show";
+			setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+			$(".version").text("Version 0.3");
+		}
+		function loadSection04(){
+			$("section").load("v04.html");
+			var x = document.getElementById("snackbar-04");
+			x.className = "show"
+			setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+			$(".version").text("Version 0.4");
+		}
+	</script>
+	
+</body>
+
+</html>
