@@ -4,14 +4,14 @@
     [
         { 
             "name":"Get Lookover v0.5 <small style='margin-left:16px;' class='tag'>New</small>", 
-            "url_zip":"download/get-lookover-v0.5.zip", 
-            "url_rar":"download/get-lookover-v0.5.rar",
+            "url_zip":"https://get-lookover.github.io/download/get-lookover-0.5.zip", 
+            "url_rar":"https://get-lookover.github.io/download/get-lookover-0.5.rar",
             "file":"get-lookover-05.html"
         },
         { 
             "name":"Get Lookover v0.1", 
-            "url_zip":"download/get-lookover-v0.1.zip", 
-            "url_rar":"download/get-lookover-v0.1.rar",
+            "url_zip":"https://get-lookover.github.io/download/get-lookover-0.1.zip", 
+            "url_rar":"https://get-lookover.github.io/download/get-lookover-0.1.rar",
             "file":"get-lookover-01.html"
         }
         
