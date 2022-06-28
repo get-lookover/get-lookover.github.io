@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Open Source CSS/JS Framework for designing a modern Website pages.">
+  <meta name="google-site-verification" content="gJC5gT8VPn7OLhjK-LP4Vr6BbGZ46MFfcV1nfSMLwEw" />
+	<link rel="icon" href="favicon.png" type="image/x-icon">
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-W8GWR4D');
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7QZHH3NCNF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-7QZHH3NCNF');
+  </script>
+  <!-- End Google Tag Manager -->
+  <title>Get lookover v0.5</title>
+  <link rel="stylesheet" href="get-lookover-v0.5/css/get-lookover.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/icons/material-symbol-rounded.woff2">
+  <link rel="preload" href="fonts/twcenmt/twcenmt.eot">
+  <link rel="preload" href="fonts/twcenmt/twcenmt.svg">
+  <link rel="preload" href="fonts/twcenmt/twcenmt.ttf">
+  <link rel="preload" href="fonts/twcenmt/twcenmt.woff">
+  <link rel="preload" href="fonts/twcenmt/twcenmt.woff2">
+  <script src="js/jquery.min.js"></script>
+  <style>
+    * {
+      line-height: 1.6;
+    }
+    body{
+      display:flex;
+      flex-direction:column;
+      margin:0 auto;
+      max-width:1200px;
+    }
+
+    .a {
+      width:90% !important;
+      max-width: inherit;
+      margin: 0.4em auto;
+    }
+
+    button.accordion {
+      border: none;
+    }
+    header .a span.material-symbols{
+      position:relative;
+      transition:transform 0.4s;
+    }
+    header .a:hover span.material-symbols{
+      transform:translateX(-5px);
+    }
+    @media (max-width:600px){
+			h1{
+				display:flex;
+				flex-direction: column;
+				gap:10px;
+			}
+    }
+    
+  </style>
+</head>
+
+<body>
+  <h1 style=" display:flex; gap:10px; align-items:center; justify-content:center;width:100%;max-width:inherit;text-align: center;font-size: 3em;"><img style="width:2em;" src="./logo.png" alt="Get Lookover icon"> Get Lookover</h1>
+
+
+  <header>
+    <a class="a" href="index.html"><span class="material-symbols margin-right-12px">chevron_left</span>Download
+      Page</a>
+  </header>
+  <div class="head padding-20px">
+    <p class="fot-lg fot-wg--bd">Learn Get Lookover v0.5</p>
+  </div>
+
+
+  <!--CDN-->
+  <div>
+    <button class="accordion round-20px padding-17px"><span
+        class="material-symbols margin-right-12px">offline_bolt</span>CDN</button>
+    <div class="panel">
+      <div style="line-height: 1.5;" class="bg-dark br-left-7px codeSize padding-12px" id="panel_1">
+        <p>&lt;!-- import Get Lookover CSS --&gt;</p>
+        <p>&lt;link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/get-lookover/cdn@v0.5/css/get-lookover.min.css"&gt;</p>
+        <p>&lt;!-- import jquery --&gt;</p>
+        <p>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"&gt;&lt;/script&gt;</p>
+        <p>&lt;!-- import Get Lookover JS --&gt;</p>
+        <p>&lt;script
+          src="https://cdn.jsdelivr.net/gh/get-lookover/cdn@v0.5/js/get-lookover.min.js"&gt;&lt;/script&gt;
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!--Navbar-->
+  <div>
+    <button class="accordion round-20px padding-17px"><span
+        class="material-symbols margin-right-12px">web_asset</span>Navigation bar <sub class="tag">new</sub></button>
+
+    <div class="panel">
+      <p>Use <code class="padding-04em margin-04em bg-light">.navbar</code> class to the header tag</p>
+      <p>Use <code class="padding-04em margin-04em bg-light">.right-navbar / .left-navbar / .center-navbar</code> , to
+        align the navbar links.</p>
+      <p>When using <code class="padding-04em margin-04em bg-light">.sticky</code> class to the header the <code
+          class="padding-04em margin-04em bg-light">.navbar-nav</code> class getting absolute position</p><br>
+      <div id="panel_2">
+        <div class="bg-dark br-left-7px codeSize padding-12px">
+          <p>&lt;!-- Navbar Without sticky class--&gt;</p>
+          <p>&lt;header class=&quot;navbar center-navbar bg-dark&quot;&gt;</p>
+          <p>&lt;h4 class=&quot;logo&quot;&gt;&lt;b&gt;Brand&lt;/b&gt;&lt;/h4&gt;</p>
+          <p>&lt;nav class=&quot;navbar-nav&quot;&gt;</p>
+          <p>&lt;ul class=&quot;navbar-links&quot;&gt;</p>
+          <p>&lt;li class=&quot;navbar-items&quot;&gt;</p>
+          <p>&lt;a class=&quot;navtab active&quot;&gt;Home&lt;/a&gt;
+            <p>&lt;/li&gt;</p>
+            <p>&lt;li class=&quot;navbar-items&quot;&gt;
+              <p>&lt;a class=&quot;navtab&quot;&gt;Download&lt;/a&gt;
+                <p>&lt;/li&gt;</p>
+                <p>&lt;li class=&quot;navbar-items&quot;&gt;
+                  <p>&lt;a class=&quot;navtab&quot;&gt;Docs&lt;/a&gt;
+                    <p>&lt;/li&gt;</p>
+                    <p>&lt;li class=&quot;navbar-items&quot;&gt;
+                      <p>&lt;a class=&quot;navtab&quot;&gt;About&lt;/a&gt;
+                        <p>&lt;/li&gt;</p>
+                        <p>&lt;/ul&gt;</p>
+                        <p>&lt;/nav&gt;</p>
+                        <p>&lt;span class=&quot;navmenu&quot;&gt;&#9776;&lt;/span&gt;</p>
+                        <p>&lt;/header&gt;</p><br>
+                        <p>&lt;!-- Navbar with sticky class--&gt;</p>
+                        <p>&lt;header class=&quot;navbar center-navbar sticky bg-dark&quot;&gt;</p>
+                        <p>&lt;h4 class=&quot;logo&quot;&gt;&lt;b&gt;Brand&lt;/b&gt;&lt;/h4&gt;</p>
+                        <p>&lt;nav class=&quot;navbar-nav&quot;&gt;</p>
+                        <p>&lt;ul class=&quot;navbar-links&quot;&gt;</p>
+                        <p>&lt;li class=&quot;navbar-items&quot;&gt;</p>
+                        <p>&lt;a class=&quot;navtab active&quot;&gt;Home&lt;/a&gt;
+                          <p>&lt;/li&gt;</p>
+                          <p>&lt;li class=&quot;navbar-items&quot;&gt;
+                            <p>&lt;a class=&quot;navtab&quot;&gt;Download&lt;/a&gt;
+                              <p>&lt;/li&gt;</p>
+                              <p>&lt;li class=&quot;navbar-items&quot;&gt;
+                                <p>&lt;a class=&quot;navtab&quot;&gt;Docs&lt;/a&gt;
+                                  <p>&lt;/li&gt;</p>
+                                  <p>&lt;li class=&quot;navbar-items&quot;&gt;
+                                    <p>&lt;a class=&quot;navtab&quot;&gt;About&lt;/a&gt;
+                                      <p>&lt;/li&gt;</p>
+                                      <p>&lt;/ul&gt;</p>
+                                      <p>&lt;/nav&gt;</p>
+                                      <p>&lt;span class=&quot;navmenu&quot;&gt;&#9776;&lt;/span&gt;</p>
+                                      <p>&lt;/header&gt;</p>
+        </div>
+      </div><br>
+      <h4>Output</h4><br>
+      <p>Use right-navbar / center-navbar / left-navbar to align the navigation link.</p><br>
+      <header class="navbar center-navbar bg-dark">
+        <h4 class="logo"><b>Get Lookover</b></h4>
+        <nav class="navbar-nav">
+          <ul class="navbar-links">
+            <li class="navbar-items"><a class="navtab active">Home</a></li>
+            <li class="navbar-items"><a class="navtab">Download</a></li>
+            <li class="navbar-items"><a class="navtab">Docs</a></li>
+            <li class="navbar-items"><a class="navtab">About</a></li>
+          </ul>
+        </nav>
+        <span class="navmenu">&#9776;</span>
+      </header><br>
+      <header class="navbar center-navbar sticky bg-dark">
+        <h4 class="logo"><b>Get Lookover</b></h4>
+        <nav class="navbar-nav">
+          <ul class="navbar-links">
+            <li class="navbar-items"><a class="navtab active">Home</a></li>
+            <li class="navbar-items"><a class="navtab">Download</a></li>
+            <li class="navbar-items"><a class="navtab">Docs</a></li>
+            <li class="navbar-items"><a class="navtab">About</a></li>
+          </ul>
+        </nav>
+        <span class="navmenu">&#9776;</span>
+      </header>
+      <br>
+
+    </div>
+  </div>
+
+  <!-- Colors -->
+  <div>
+    <button class="accordion round-20px padding-17px"><span
+        class="material-symbols margin-right-12px">palette</span>Colors<sub class="tag">new</sub></button>
+    <div class="panel">
+      <div style="line-height: 1.5;" id="panel_3">
+        <div>
+          <p style="display: flex; justify-content:space-between;border-bottom: 1px solid;"
+            class="padding-12px margin-04em"><span class="margin-right-12px">primary</span><span
+              class="bg-primary">...</span></p>
+          <p style="display: flex; justify-content:space-between;border-bottom: 1px solid;"
+            class="padding-12px margin-04em"><span class="margin-right-12px">info</span><span class="bg-info">...</span>
+          </p>
+          <p style="display: flex; justify-content:space-between;border-bottom: 1px solid;"
+            class="padding-12px margin-04em"><span class="margin-right-12px">success</span><span
+              class="bg-success">...</span></p>
+          <p style="display: flex; justify-content:space-between;border-bottom: 1px solid;"
+            class="padding-12px margin-04em"><span class="margin-right-12px">danger</span><span
+              class="bg-danger">...</span></p>
+          <p style="display: flex; justify-content:space-between;border-bottom: 1px solid;"
+            class="padding-12px margin-04em"><span class="margin-right-12px">warning</span><span
+              class="bg-warning">...</span></p>
+          <p style="display: flex; justify-content:space-between;border-bottom: 1px solid;"
+            class="padding-12px margin-04em"><span class="margin-right-12px">red</span><span class="bg-red">...</span>
+          </p>
+          <p style="display: flex; justify-content:space-between;border-bottom: 1px solid;"
+            class="padding-12px margin-04em"><span class="margin-right-12px">pink</span><span class="bg-pink">...</span>
+          </p>
+          <p style="display: flex; justify-content:space-between;border-bottom: 1px solid;"
+            class="padding-12px margin-04em"><span class="margin-right-12px">purple</span><span
+              class="bg-purple">...</span></p>
+          <p style="display: flex; justify-content:space-between;border-bottom: 1px solid;"
+            class="padding-12px margin-04em"><span class="margin-right-12px">indigo</span><span
+              class="bg-indigo">...</span></p>
+          <p style="display: flex; justify-content:space-between;border-bottom: 1px solid;"
+            class="padding-12px margin-04em"><span class="margin-right-12px">blue</span><span class="bg-blue">...</span>
+          </p>
+          <p style="display: flex; justify-content:space-between;border-bottom: 1px solid;"
+            class="padding-12px margin-04em"><span class="margin-right-12px">cyan</span><span class="bg-cyan">...</span>
+          </p>
+          <p style="display: flex; justify-content:space-between;border-bottom: 1px solid;"
+            class="padding-12px margin-04em"><span class="margin-right-12px">green</span><span
+              class="bg-green">...</span></p>
+          <p style="display: flex; justify-content:space-between;border-bottom: 1px solid;"
+            class="padding-12px margin-04em"><span class="margin-right-12px">yellow</span><span
+              class="bg-yellow">...</span></p>
+          <p style="display: flex; justify-content:space-between;border-bottom: 1px solid;"
+            class="padding-12px margin-04em"><span class="margin-right-12px">orange</span><span
+              class="bg-orange">...</span></p>
+          <p style="display: flex; justify-content:space-between;border-bottom: 1px solid;"
+            class="padding-12px margin-04em"><span class="margin-right-12px">brown</span><span
+              class="bg-brown">...</span></p>
+          <p style="display: flex; justify-content:space-between;border-bottom: 1px solid;"
+            class="padding-12px margin-04em"><span class="margin-right-12px">dark</span><span class="bg-dark">...</span>
+          </p>
+          <p style="display: flex; justify-content:space-between;border-bottom: 1px solid;"
+            class="padding-12px margin-04em"><span class="margin-right-12px">light</span><span
+              class="bg-light">...</span></p>
+          <p style="display: flex; justify-content:space-between;border-bottom: 1px solid;"
+            class="padding-12px margin-04em"><span class="margin-right-12px">twitter</span><span
+              class="bg-twitter">...</span></p>
+          <p style="display: flex; justify-content:space-between;border-bottom: 1px solid;"
+            class="padding-12px margin-04em"><span class="margin-right-12px">messenger</span><span
+              class="bg-messenger">...</span></p>
+          <p style="display: flex; justify-content:space-between;border-bottom: 1px solid;"
+            class="padding-12px margin-04em"><span class="margin-right-12px">skype</span><span
+              class="bg-skype">...</span></p>
+          <p style="display: flex; justify-content:space-between;border-bottom: 1px solid;"
+            class="padding-12px margin-04em"><span class="margin-right-12px">wordpress</span><span
+              class="bg-wordpress">...</span></p>
+          <p style="display: flex; justify-content:space-between;border-bottom: 1px solid;"
+            class="padding-12px margin-04em"><span class="margin-right-12px">whatsapp</span><span
+              class="bg-whatsapp">...</span></p>
+          <p style="display: flex; justify-content:space-between;border-bottom: 1px solid;"
+            class="padding-12px margin-04em"><span class="margin-right-12px">snapchat</span><span
+              class="bg-snapchat">...</span></p>
+          <p style="display: flex; justify-content:space-between;border-bottom: 1px solid;"
+            class="padding-12px margin-04em"><span class="margin-right-12px">behance</span><span
+              class="bg-behance">...</span></p>
+          <p style="display: flex; justify-content:space-between;border-bottom: 1px solid;"
+            class="padding-12px margin-04em"><span class="margin-right-12px">quora</span><span
+              class="bg-quora">...</span></p>
+          <p style="display: flex; justify-content:space-between;border-bottom: 1px solid;"
+            class="padding-12px margin-04em"><span class="margin-right-12px">pinterest</span><span
+              class="bg-pinterest">...</span></p>
+          <p style="display: flex; justify-content:space-between;border-bottom: 1px solid;"
+            class="padding-12px margin-04em"><span class="margin-right-12px">linkedin</span><span
+              class="bg-linkedin">...</span></p>
+          <p style="display: flex; justify-content:space-between;border-bottom: 1px solid;"
+            class="padding-12px margin-04em"><span class="margin-right-12px">facebook</span><span
+              class="bg-facebook">...</span></p>
+          <p style="display: flex; justify-content:space-between;border-bottom: 1px solid;"
+            class="padding-12px margin-04em"><span class="margin-right-12px">yahoo</span><span
+              class="bg-yahoo">...</span></p>
+          <p style="display: flex; justify-content:space-between;border-bottom: 1px solid;"
+            class="padding-12px margin-04em"><span class="margin-right-12px">github</span><span
+              class="bg-github">...</span></p>
+          <p style="display: flex; justify-content:space-between;" class="padding-12px margin-04em"><span
+              class="margin-right-12px">reddit</span><span class="bg-reddit">...</span></p>
+        </div>
+
+        <br>
+        <h4>To use Background color add<code class="padding-04em margin-04em bg-light">bg- </code> before color's name.
+        </h4>
+        <br>
+        <div>
+          <h5>Example</h5>
+          <div class="bg-dark br-left-7px codeSize padding-12px">
+            <p>&lt;div class=&quot;bg-twitter&quot;&gt;</p>
+            <p>...</p>
+            <p>&lt;/div&gt;</p>
+          </div>
+
+          <br>
+          <div>
+            <h3>Output</h3>
+            <div class="bg-twitter">
+              ...
+            </div>
+          </div>
+        </div>
+        <br>
+        <h4>To use Text color add<code class="padding-04em margin-04em bg-light">text-</code> before color's name.</h4>
+        <br>
+        <div>
+          <h5>Example</h5>
+          <div class="bg-dark br-left-7px codeSize padding-12px">
+            <p>&lt;div class=&quot;text-orange&quot;&gt;</p>
+            <p>Text with orange Color</p>
+            <p>&lt;/div&gt;</p>
+          </div>
+
+          <br>
+          <div>
+            <h3>Output</h3>
+            <div class="text-orange">
+              Text with orange Color
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Alert -->
+  <div>
+    <button class="accordion round-20px padding-17px"><span
+        class="material-symbols margin-right-12px">warning</span>Alert<sub class="tag">new</sub></button>
+    <div class="panel">
+      <h4>Alert Background Colors</h4>
+      <br>
+      <div style="line-height: 1.5;" id="panel_4">
+        <p>To use Alerts add<code class="padding-04em margin-04em bg-light">.alert-${<i>color-name</i>} / .alert
+            bg-${<i>color-name</i>}</code>.</p>
+        <br>
+        <h5>Example</h5>
+        <div class="bg-dark br-left-7px codeSize padding-12px">
+          <p>&lt;div class="alert-reddit"&gt;</p>
+          <p>&lt;b&gt;Alert&lt;/b&gt; text here</p>
+          <p>&lt;/div&gt;</p><br>
+          <p>&lt;div class="alert bg-reddit"&gt;</p>
+          <p>&lt;b&gt;Alert&lt;/b&gt; text here</p>
+          <p>&lt;/div&gt;</p><br>
+          <p>&lt;div class="alert bg-primary"&gt;</p>
+          <p>&lt;b&gt;Alert&lt;/b&gt; text here</p>
+          <p>&lt;/div&gt;</p>
+        </div>
+        <br>
+        <h3>Output</h3>
+        <div class="alert-reddit">
+          <b>Alert</b> text here
+        </div><br>
+        <div class="alert bg-reddit">
+          <b>Alert</b> text here
+        </div><br>
+        <div class="alert bg-primary">
+          <b>Alert</b> text here
+        </div>
+      </div>
+      <br>
+      <h4>Alert default Colors</h4>
+      <br>
+      <div style="line-height: 1.5;" id="panel_5">
+        <p>To use Alerts add after<code class="padding-04em margin-04em bg-light">.alert</code>Class following
+          classes<code class="padding-04em margin-04em bg-light">-primary/-success/-danger/-warning/-info</code>.</p>
+        <br>
+        <h5>Example</h5>
+        <div class="bg-dark br-left-7px codeSize padding-12px">
+          <p>&lt;div class="alert-danger"&gt;</p>
+          <p>&lt;b&gt;Alert&lt;/b&gt; text here</p>
+          <p>&lt;/div&gt;</p>
+        </div>
+        <br>
+        <h3>Output</h3>
+        <div class="alert-danger">
+          <b>Alert</b> text here
+        </div>
+      </div>
+      <br>
+      <h4>Alert with close button</h4>
+      <br>
+      <div style="line-height: 1.5;" id="panel_6">
+        <p>Add a button/span with class<code class="padding-04em margin-04em bg-light">.close / .close-slide</code> to
+          deside the closing animation inside Alert parent class.</p>
+        <br>
+        <h5>Example</h5>
+        <div class="bg-dark br-left-7px codeSize padding-12px">
+          <p>&lt;-- Close with Fade closing animation --&gt;</p>
+          <p>&lt;div class="alert-info"&gt;</p>
+          <p>&lt;spanclass=&quot;close&quot;&gt;&amp;times;&lt;/span&gt;</p>
+          <p>&lt;b&gt;Alert&lt;/b&gt; text here</p>
+          <p>&lt;/div&gt;</p><br>
+          <p>&lt;-- Close with Slide closing animation --&gt;</p>
+          <p>&lt;div class="alert-primary"&gt;</p>
+          <p>&lt;spanclass=&quot;close-slide&quot;&gt;&amp;times;&lt;/span&gt;</p>
+          <p>&lt;b&gt;Alert&lt;/b&gt; text here</p>
+          <p>&lt;/div&gt;</p>
+        </div>
+        <br>
+        <h3>Output</h3>
+        <div class="alert-info">
+          <span class="close">
+            &times;
+          </span>
+          <b>Alert</b> text here
+        </div><br>
+        <div class="alert-primary">
+          <span class="close-slide">
+            &times;
+          </span>
+          <b>Alert</b> text here
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+
+
+  <!-- Buttons -->
+  <div>
+    <button class="accordion round-20px padding-17px"><span
+        class="material-symbols margin-right-12px">grid_view</span>Buttons<sub class="tag">new</sub></button>
+    <div class="panel">
+      <h4>Buttons</h4>
+      <br>
+      <div style="line-height: 1.5;" id="panel_7">
+        <p>To use Buttons add<code class="padding-04em margin-04em bg-light">.btn</code>Class. To use Get Lookover
+          colors add<code class="padding-04em margin-04em bg-light">.btn-${<i>color-name</i>}</code> .</p>
+        <br>
+        <h5>Example</h5>
+        <div class="bg-dark br-left-7px codeSize padding-12px">
+          <p>&lt;button class="btn-green"&gt;Btn Green&lt;/button&gt;</p>
+          <p>&lt;button class="btn-red bar"&gt;Btn Red&lt;/button&gt;</p>
+        </div>
+        <br>
+        <h3>Output</h3>
+        <button class="btn-green">Btn Green</button>
+        <button class="btn-red bar">Btn Red</button>
+      </div>
+      <br>
+      <h4>Outline Buttons</h4>
+      <br>
+      <div style="line-height: 1.5;" id="panel_8">
+        <p>To use Buttons add<code class="padding-04em margin-04em bg-light">.btn-out-${color-name}</code>Class.</p>
+        <p>To use full width Buttons add<code class="padding-04em margin-04em bg-light">.bar</code>Class.</p>
+        <br>
+        <h5>Example</h5>
+        <div class="bg-dark br-left-7px codeSize padding-12px">
+          <p>&lt;button class="btn-out-success"&gt;Btn Outline Success&lt;/button&gt;</p>
+          <p>&lt;button class="btn-out-dark"&gt;Btn Outline Dark&lt;/button&gt;</p>
+        </div>
+        <br>
+        <h3>Output</h3>
+        <button class="btn-out-success">
+          Btn Outline Success
+        </button>
+        <button class="btn-out-dark">
+          Btn Outline Dark
+        </button>
+      </div>
+      <br>
+      <h4>Buttons Group</h4>
+      <br>
+      <div style="line-height: 1.5;" id="panel_9">
+        <p>To use a group of Buttons add inside<code class="padding-04em margin-04em bg-light">.group-btn</code>Buttons
+          classes.</p>
+        <p>When using<code class="padding-04em margin-04em bg-light">.bar</code>class to button inside<code
+            class="padding-04em margin-04em bg-light">.group-btn</code>it given the full width of the rest of empty
+          space.</p>
+        <p>When adding <code class="padding-04em margin-04em bg-light">.bar</code>class for all buttons it giving an
+          equal width.
+          <br>
+          <h5>Example</h5>
+          <div class="bg-dark br-left-7px codeSize padding-12px">
+            <p>&lt;!-- Button Group --&gt;</p>
+            <p>&lt;div class=&quot;group-btn&quot;&gt;</p>
+            <p>&lt;button class=&quot;btn-danger&quot;&gt;1st Button&lt;/button&gt;</p>
+            <p>&lt;button class=&quot;btn-primary&quot;&gt;2nd Button&lt;/button&gt;</p>
+            <p>&lt;button class=&quot;btn-success&quot;&gt;3rd Button&lt;/button&gt;</p>
+            <p>&lt;button class=&quot;btn-warning&quot;&gt;4th Button&lt;/button&gt;</p>
+            <p>&lt;button class=&quot;btn-blue bar&quot;&gt;5th Button&lt;/button&gt;</p>
+            <p>&lt;/div&gt;</p><br>
+            <p>&lt;div class=&quot;group-btn&quot;&gt;</p>
+            <p>&lt;button class=&quot;btn-danger bar&quot;&gt;1st Button&lt;/button&gt;</p>
+            <p>&lt;button class=&quot;btn-primary bar&quot;&gt;2nd Button&lt;/button&gt;</p>
+            <p>&lt;button class=&quot;btn-success bar&quot;&gt;3rd Button&lt;/button&gt;</p>
+            <p>&lt;button class=&quot;btn-warning bar&quot;&gt;4th Button&lt;/button&gt;</p>
+            <p>&lt;button class=&quot;btn-blue bar&quot;&gt;5th Button&lt;/button&gt;</p>
+            <p>&lt;/div&gt;</p>
+          </div>
+          <br>
+          <h3>Output</h3>
+          <!-- Button Group -->
+          <div class="group-btn">
+            <button class="btn-danger">1st Button</button>
+            <button class="btn-primary">2nd Button</button>
+            <button class="btn-success">3rd Button</button>
+            <button class="btn-warning">4th Button</button>
+            <button class="btn-blue bar">5th Button</button>
+          </div><br>
+          <div class="group-btn">
+            <button class="btn-danger bar">1st Button</button>
+            <button class="btn-primary bar">2nd Button</button>
+            <button class="btn-success bar">3rd Button</button>
+            <button class="btn-warning bar">4th Button</button>
+            <button class="btn-blue bar">5th Button</button>
+          </div>
+      </div>
+      <br>
+    </div>
+  </div>
+
+
+  <!-- Container -->
+  <div>
+    <button class="accordion round-20px padding-17px"><span
+        class="material-symbols margin-right-12px">fullscreen</span>Container</button>
+    <div class="panel">
+      <h4>Containers types</h4>
+      <p>There is two types of containers:
+        <ol class="margin-left-12px padding-12px">
+          <li>Container Fluid : Full width with a padding 0.4rem.</li>
+          <li>Container : Full width with a padding 0.4rem and margin 0.4rem from left and right.</li>
+        </ol>
+      </p>
+      <br>
+      <div style="line-height: 1.5;" id="panel_10">
+        <p>To use Container add<code class="padding-04em margin-04em bg-light">.container</code>Class.</p>
+        <p>To use Container Fluid add<code class="padding-04em margin-04em bg-light">.container-fluid</code>Class.</p>
+        <br>
+        <h5>Example</h5>
+        <div class="bg-dark br-left-7px codeSize padding-12px">
+          <p>&lt;!-- container --&gt;</p>
+          <p>&lt;div class=&quot;bg-red container&quot;&gt;</p>
+          <p>A text Here</p>
+          <p>&lt;/div&gt;</p>
+
+
+          <p>&lt;!-- container-fluid --&gt;</p>
+          <p>&lt;div class=&quot;bg-red container-fluid&quot;&gt;</p>
+          <p>A text Here</p>
+          <p>&lt;/div&gt;</p>
+        </div>
+        <br>
+        <h3>Output</h3>
+        <!-- container -->
+        <div class="bg-red container">
+          <p>A text Here</p>
+        </div>
+        <br>
+
+        <!-- container-fluid -->
+        <div class="bg-red container-fluid">
+          <p>A text Here</p>
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+
+  <!-- Jumbotron -->
+  <div>
+    <button class="accordion round-20px padding-17px"><span
+        class="material-symbols margin-right-12px">fullscreen</span>Jumbotron</button>
+    <div class="panel">
+      <h4>Jumbotrons types</h4><br>
+      <p>There is two types of containers:
+        <ol class="margin-left-12px padding-12px">
+          <li>Jumbotron Fluid : Full width with a padding 0.4rem and margin 0.4rem from top and bottom and border-radius
+            0.4rem.</li>
+          <li>Jumbotron : Full width with a padding 0.4rem and margin 0.4rem and border-radius 0.4rem.</li>
+        </ol>
+      </p>
+      <br>
+      <div style="line-height: 1.5;" id="panel_11">
+        <p>To use Jumbotron add<code class="padding-04em margin-04em bg-light">.jumbo</code>Class.</p>
+        <p>To use Jumbotron Fluid add<code class="padding-04em margin-04em bg-light">.jumbo-fluid</code>Class.</p>
+        <br>
+        <h5>Example</h5>
+        <div class="bg-dark br-left-7px codeSize padding-12px">
+          <p>&lt;!-- jumbo --&gt;</p>
+          <p>&lt;div class=&quot;bg-red jumbo&quot;&gt;</p>
+          <p>A text Here</p>
+          <p>&lt;/div&gt;</p>
+
+
+          <p>&lt;!-- jumbo-fluid --&gt;</p>
+          <p>&lt;div class=&quot;bg-red jumbo-fluid&quot;&gt;</p>
+          <p>A text Here</p>
+          <p>&lt;/div&gt;</p>
+        </div>
+        <br>
+        <h3>Output</h3>
+        <!-- jumbo -->
+        <div class="bg-red jumbo">
+          <p>A text Here</p>
+        </div>
+        <!-- jumbo-fluid -->
+        <div class="bg-red jumbo-fluid">
+          <p>A text Here</p>
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+
+  <!-- Margin -->
+  <div>
+    <button class="accordion round-20px padding-17px"><span class="material-symbols margin-right-12px">view_day</span>Margin<sub class="tag">new</sub></button>
+    <div class="panel">
+      <h4>Margin (all sides)</h4>
+      <p style="line-height: 2;">To use margin add<code class="padding-04em margin-04em bg-light">.margin-</code>class before margin sizes.</p>
+      <h4>Margin sizes</h4>
+        <ul class="margin-left-12px padding-12px">
+          <li>Px sizes : for each margin sizes from 01px = 0.1px to 09px = 0.9px.</li>
+          <li>Px sizes : for each margin sizes from 1px to 30px.</li>
+          <li>Em sizes : for each margin sizes from 01em = 0.1em to 09em = 0.9em.</li>
+          <li>Em sizes : for each margin sizes from 1em to 30em.</li>
+          <li>Rem sizes : for each margin sizes from 01rem = 0.1rem to 09rem = 0.9rem.</li>
+          <li>Rem sizes : for each margin sizes from 1rem to 30rem.</li>
+        </ul>
+      <div style="line-height: 2;" id="panel_12">
+        <p>To use Margin for the Top side add<code class="padding-04em margin-04em bg-light">.margin-top</code>Class.
+        </p>
+        <p>To use Margin for the Bottom side add<code class="padding-04em margin-04em bg-light">.margin-bottom</code>Class.</p>
+        <p>To use Margin for the Left side add<code class="padding-04em margin-04em bg-light">.margin-left</code>Class.
+        </p>
+        <p>To use Margin for the Right side add<code class="padding-04em margin-04em bg-light">.margin-right</code>Class.</p><br>
+        <br>
+        <h5>Example</h5>
+        <div class="bg-dark br-left-7px codeSize padding-12px">
+          <p>&lt;!-- container with each margin value--&gt;</p>
+          <p>&lt;div class=&quot;margin-3em bg-red container&quot;&gt;</p>
+          <p>A text Here</p>
+          <p>&lt;/div&gt;</p>
+          <p>&lt;div class=&quot;margin-bottom-04em bg-red container&quot;&gt;</p>
+          <p>A text Here</p>
+          <p>&lt;/div&gt;</p>
+          <p>&lt;div class=&quot;margin-right-24rem bg-red container&quot;&gt;</p>
+          <p>A text Here</p>
+          <p>&lt;/div&gt;</p>
+          <p>&lt;div class=&quot;margin-left-16px bg-red container&quot;&gt;</p>
+          <p>A text Here</p>
+          <p>&lt;/div&gt;</p>
+          <p>&lt;div class=&quot;margin-top-30px bg-red container&quot;&gt;</p>
+          <p>A text Here</p>
+          <p>&lt;/div&gt;</p>
+        </div>
+        <br>
+        <h3>Output</h3>
+        <div class="margin-3em bg-red  container">
+          <p>A text Here</p>
+        </div>
+        <div class="margin-bottom-04em bg-red  container">
+          <p>A text Here</p>
+        </div>
+        <div class="margin-right-24rem bg-red  container">
+          <p>A text Here</p>
+        </div>
+        <div class="margin-left-16px bg-red  container">
+          <p>A text Here</p>
+        </div>
+        <div class="margin-top-30px bg-red  container">
+          <p>A text Here</p>
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+
+
+  <!-- Padding -->
+  <div>
+    <button class="accordion round-20px padding-17px"><span
+        class="material-symbols margin-right-12px">vertical_distribute</span>Padding<sub class="tag">new</sub></button>
+    <div class="panel">
+      <h4>Padding (all sides)</h4>
+      <p style="line-height: 2;">To use padding add<code class="padding-04em padding-04em bg-light">.padding-</code>class before padding sizes.</p>
+      <h4>Padding sizes</h4>
+        <ul class="padding-left-12px padding-12px">
+          <li>Px sizes : for each padding sizes from 01px = 0.1px to 09px = 0.9px.</li>
+          <li>Px sizes : for each padding sizes from 1px to 30px.</li>
+          <li>Em sizes : for each padding sizes from 01em = 0.1em to 09em = 0.9em.</li>
+          <li>Em sizes : for each padding sizes from 1em to 30em.</li>
+          <li>Rem sizes : for each padding sizes from 01rem = 0.1rem to 09rem = 0.9rem.</li>
+          <li>Rem sizes : for each padding sizes from 1rem to 30rem.</li>
+        </ul>
+      <div style="line-height: 2;" id="panel_13">
+        <p>To use padding for the Top side add<code class="padding-04em padding-04em bg-light">.padding-top</code>Class.
+        </p>
+        <p>To use padding for the Bottom side add<code class="padding-04em padding-04em bg-light">.padding-bottom</code>Class.</p>
+        <p>To use padding for the Left side add<code class="padding-04em padding-04em bg-light">.padding-left</code>Class.
+        </p>
+        <p>To use padding for the Right side add<code class="padding-04em padding-04em bg-light">.padding-right</code>Class.</p><br>
+        <br>
+        <h5>Example</h5>
+        <div class="bg-dark br-left-7px codeSize padding-12px">
+          <p>&lt;!-- container with each padding value--&gt;</p>
+          <p>&lt;div class=&quot;padding-3em bg-red container&quot;&gt;</p>
+          <p>A text Here</p>
+          <p>&lt;/div&gt;</p>
+          <p>&lt;div class=&quot;padding-bottom-04em bg-red container&quot;&gt;</p>
+          <p>A text Here</p>
+          <p>&lt;/div&gt;</p>
+          <p>&lt;div class=&quot;padding-left-24rem bg-red container&quot;&gt;</p>
+          <p>A text Here</p>
+          <p>&lt;/div&gt;</p>
+          <p>&lt;div class=&quot;padding-left-16px bg-red container&quot;&gt;</p>
+          <p>A text Here</p>
+          <p>&lt;/div&gt;</p>
+          <p>&lt;div class=&quot;padding-top-30px bg-red container&quot;&gt;</p>
+          <p>A text Here</p>
+          <p>&lt;/div&gt;</p>
+        </div>
+        <br>
+        <h3>Output</h3>
+        <div class="padding-3em bg-red  container">
+          <p>A text Here</p>
+        </div><br>
+        <div class="padding-bottom-04em bg-red  container">
+          <p>A text Here</p>
+        </div><br>
+        <div class="padding-left-24rem bg-red  container">
+          <p>A text Here</p>
+        </div><br>
+        <div class="padding-left-16px bg-red  container">
+          <p>A text Here</p>
+        </div><br>
+        <div class="padding-top-30px bg-red  container">
+          <p>A text Here</p>
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+
+  <!-- Display -->
+  <div>
+    <button class="accordion round-20px padding-17px"><span
+        class="material-symbols margin-right-12px">space_dashboard</span>Display</button>
+    <div class="panel">
+      <p>How to use display:
+        <ol class="margin-left-12 padding-12">
+          <li>Display Container : Is allow you to display HTML elements in specific positions inside parent HTML
+            elements.</li>
+          <li>Display top right : Is allow you to display HTML elements in the right top of the parent HTML elements.
+          </li>
+          <li>Display top left : Is allow you to display HTML elements in the left top of the parent HTML elements.</li>
+          <li>Display top center : Is allow you to display HTML elements in the center top of the parent HTML elements.
+          </li>
+          <li>Display bottom left : Is allow you to display HTML elements in the left bottom of the parent HTML
+            elements.</li>
+          <li>Display bottom left : Is allow you to display HTML elements in the left bottom of the parent HTML
+            elements.</li>
+          <li>Display bottom center : Is allow you to display HTML elements in the center bottom of the parent HTML
+            elements.</li>
+          <li>Display left : Is allow you to display HTML elements in the left of the parent HTML elements.</li>
+          <li>Display left : Is allow you to display HTML elements in the left of the parent HTML elements.</li>
+          <li>Display center : Is allow you to display HTML elements in the center of the parent HTML elements.</li>
+        </ol>
+      </p>
+      <br>
+      <div style="line-height: 1.5;" id="panel_14">
+        <p><b>N.B :</b> is required to add<code class="padding-04em margin-04em bg-light">.display-container</code>as a
+          parent class.</p>
+        <br>
+        <h5>Example</h5>
+        <div class="bg-dark br-left-7px codeSize padding-12px">
+          <p>&lt;!--display--&gt;</p>
+          <p>&lt;div class=&quot;display-container color-reddit-bg&quot; style="height: 15em; width:100%;"&gt;</p>
+          <p>&lt;p class=&quot;display-top-left&quot;&gt; display-top-left &lt;/p&gt;</p>
+          <p>&lt;p class=&quot;display-top-center&quot;&gt; display-top-center &lt;/p&gt;</p>
+          <p>&lt;p class=&quot;display-top-right&quot;&gt; display-top-right &lt;/p&gt;</p>
+          <p>&lt;p class=&quot;display-left&quot;&gt; display-left &lt;/p&gt;</p>
+          <p>&lt;p class=&quot;display-center&quot;&gt; display-center &lt;/p&gt;</p>
+          <p>&lt;p class=&quot;display-right&quot;&gt; display-right &lt;/p&gt;</p>
+          <p>&lt;p class=&quot;display-bottom-left&quot;&gt; display-bottom-left &lt;/p&gt;</p>
+          <p>&lt;p class=&quot;display-bottom-center&quot;&gt; display-bottom-center &lt;/p&gt;</p>
+          <p>&lt;p class=&quot;display-bottom-right&quot;&gt; display-bottom-right &lt;/p&gt;</p>
+          <p>&lt;/div&gt;</p>
+        </div>
+        <br>
+        <h3>Output</h3>
+        <!--display-->
+        <div class="display-container color-reddit-bg" style="height: 15em; width:100%;">
+          <p class="display-top-left"> display-top-left </p>
+          <p class="display-top-center"> display-top-center </p>
+          <p class="display-top-right"> display-top-right </p>
+          <p class="display-left"> display-left </p>
+          <p class="display-center"> display-center </p>
+          <p class="display-right"> display-right </p>
+          <p class="display-bottom-left"> display-bottom-left </p>
+          <p class="display-bottom-center"> display-bottom-center </p>
+          <p class="display-bottom-right"> display-bottom-right </p>
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+
+  <!-- Input -->
+  <div>
+    <button class="accordion round-20px padding-17px"><span
+        class="material-symbols margin-right-12px">line_weight</span>Input</button>
+    <div class="panel">
+      <p>How to use input:
+        <ol class="margin-left-12px padding-12px">
+          <li>input : build a modern input tag.</li>
+          <li>input-large/-large-x/-large-xx/-large-xxx : Is allow you to make the input larger.</li>
+        </ol>
+      </p>
+      <br>
+      <div style="line-height: 1.5;" id="panel_15">
+        <h5>Example</h5>
+        <div class="bg-dark br-left-7px codeSize padding-12px">
+          <p>&lt;input type=&quot;text&quot; name=&quot;input&quot; placeholder="Normal input"
+            class=&quot;input&quot;&gt;</p><br>
+          <p>&lt;input type=&quot;text&quot; name=&quot;input&quot; placeholder="Input Large"
+            class=&quot;input-large&quot;&gt;</p><br>
+          <p>&lt;input type=&quot;text&quot; name=&quot;input&quot; placeholder="Input Large-x"
+            class=&quot;input-large-x&quot;&gt;</p><br>
+          <p>&lt;input type=&quot;text&quot; name=&quot;input&quot; placeholder="Input Large-xx"
+            class=&quot;input-large-xx&quot;&gt;</p><br>
+          <p>&lt;input type=&quot;text&quot; name=&quot;input&quot; placeholder="Input Large-xxx"
+            class=&quot;input-large-xxx&quot;&gt;</p><br>
+        </div>
+        <br>
+        <h3>Output</h3>
+        <input type="text" name="input" placeholder="Normal input" class="input">
+        <input type="text" name="input" placeholder="Input Large" class="input-large">
+        <input type="text" name="input" placeholder="Input Large-x" class="input-large-x">
+        <input type="text" name="input" placeholder="Input Large-xx" class="input-large-xx">
+        <input type="text" name="input" placeholder="Input Large-xxx" class="input-large-xxx">
+      </div>
+      <br>
+    </div>
+  </div>
+
+  <!-- Input Group -->
+  <div>
+    <button class="accordion round-20px padding-17px"><span
+        class="material-symbols margin-right-12px">view_list</span>Input Group</button>
+    <div class="panel">
+      <p>How to use input group:
+        <ol class="margin-left-12px padding-12px">
+          <li>Group Input: Allow you to display the label and the input inline with moden design.</li>
+          <li>Before label: Allow you to design the label before the input.</li>
+          <li>Add <code class="padding-04em margin-04em bg-light">-reverse</code> if the label after the input.</li>
+          <li>After label: Allow you to design the label after the input.</li>
+        </ol>
+      </p>
+      <br>
+      <div style="line-height: 1.5;" id="panel_16">
+        <h5>Example</h5>
+        <div class="bg-dark br-left-7px codeSize padding-12px">
+          <p>&lt;!-- Inline group --&gt;</p>
+          <p>&lt;div class=&quot;group-input&quot;&gt;</p>
+          <p>&lt;label for=&quot;input&quot; class=&quot;before-label&quot;&gt;&lt;/label&gt;</p>
+          <p>&lt;input type=&quot;text&quot; name=&quot;input&quot; class=&quot;input&quot;&gt;</p>
+          <p>&lt;/div&gt;</p>
+          <br>
+          <p>&lt;!-- Inline group reverse --&gt;</p>
+          <p>&lt;div class=&quot;group-input-reverse&quot;&gt;</p>
+          <p>&lt;input type=&quot;text&quot; name=&quot;input reverse&quot; class=&quot;input&quot;&gt;</p>
+          <p>&lt;label for=&quot;input&quot; class=&quot;after-label&quot;&gt;&lt;/label&gt;</p>
+          <p>&lt;/div&gt;</p>
+        </div>
+        <br>
+        <h3>Output</h3>
+        <!-- Inline group -->
+        <div class="group-input">
+          <label for="input" class="before-label color-dark-text">Normal Input group</label>
+          <input type="text" name="input" class="input">
+        </div>
+        <br>
+        <!-- Inline group reverse -->
+        <div class="group-input-reverse">
+          <input type="text" name="input reverse" class="input">
+          <label for="input" class="after-label color-dark-text">Reverse Input group</label>
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+
+
+  <!-- Form control -->
+  <div>
+    <button class="accordion round-20px padding-17px"><span
+        class="material-symbols margin-right-12px">assignment</span>Form control</button>
+    <div class="panel">
+      <p>How to use form-control:
+        <ol class="margin-left-12px padding-12px">
+          <li>Add <code class="padding-04em margin-04em bg-light">.form-control</code>to the &lt;form&gt; tag to design
+            a beautiful form.</li>
+          <li>You can add any type of inputs designs</li>
+        </ol>
+      </p>
+      <br>
+      <div style="line-height: 1.5;" id="panel_17">
+        <h5>Example</h5>
+        <div class="bg-dark br-left-7px codeSize padding-12px">
+          <p>&lt;!-- form-control v.1--&gt;</p>
+          <p>&lt;form class=&quot;form-control&quot;&gt;</p>
+          <p>&lt;!-- Inline group --&gt;</p>
+          <p>&lt;div class=&quot;group-input&quot;&gt;</p>
+          <p>&lt;label for=&quot;input&quot; class=&quot;before-label color-dark-text&quot;&gt;Normal Input
+            group&lt;/label&gt;</p>
+          <p>&lt;input type=&quot;text&quot; name=&quot;input&quot; class=&quot;input&quot;&gt;</p>
+          <p>&lt;/div&gt;</p>
+          <p>&lt;!-- Inline group reverse --&gt;</p>
+          <p>&lt;div class=&quot;group-input-reverse&quot;&gt;</p>
+          <p>&lt;input type=&quot;text&quot; name=&quot;input reverse&quot; class=&quot;input&quot;&gt;</p>
+          <p>&lt;label for=&quot;input&quot; class=&quot;after-label color-dark-text&quot;&gt;Reverse Input
+            group&lt;/label&gt;</p>
+          <p>&lt;/div&gt;</p>
+          <p>&lt;/form&gt;</p>
+          <br>
+          <p>&lt;!-- form-control v.2 --&gt;</p>
+          <p>&lt;form class=&quot;form-control&quot;&gt;</p>
+          <p>&lt;label for=&quot;input&quot;&gt;Label 1 here&lt;/label&gt;</p>
+          <p>&lt;input type=&quot;text&quot; name=&quot;input&quot; class=&quot;input&quot;&gt;</p>
+
+          <p>&lt;label for=&quot;input&quot;&gt;Label 2 here&lt;/label&gt;</p>
+          <p>&lt;input type=&quot;text&quot; name=&quot;input&quot; class=&quot;input&quot;&gt;</p>
+          <p>&lt;/form&gt;</p>
+        </div>
+        <br>
+        <h3>Output</h3>
+        <p>We add in those examples color-behance-bg for the background color and we add the borders class <small>(you
+            will be able to use border class in the next documentation)</small></p>
+        <br>
+        <!-- form-control v.1-->
+        <form class="br-solid-1 round color-behance-bg form-control">
+          <h3>Form-control v.1</h3>
+          <!-- Inline group -->
+          <div class="group-input">
+            <label for="input" class="before-label color-dark-text">Normal</label>
+            <input type="text" name="input" class="input">
+          </div>
+          <br>
+          <!-- Inline group reverse -->
+          <div class="group-input-reverse">
+            <input type="text" name="input reverse" class="input">
+            <label for="input" class="after-label color-dark-text">Reverse</label>
+          </div>
+        </form>
+        <br>
+        <!-- form-control v.2 -->
+        <form class="br-solid-1 round color-behance-bg form-control">
+          <h3>Form-control v.2</h3>
+          <label for="input">Label 1 here</label>
+          <input type="text" name="input" class="input">
+
+          <label for="input">Label 2 here</label>
+          <input type="text" name="input" class="input">
+        </form>
+      </div>
+      <br>
+    </div>
+  </div>
+
+  <!-- Borders -->
+  <div>
+    <button class="accordion round-20px padding-17px"><span
+        class="material-symbols margin-right-12px">border_left</span>Borders<sub class="tag">new</sub></button>
+    <div class="panel">
+      <p>How to use border:
+        <ol class="margin-left-12px padding-12px">
+          <li>Add<code class="padding-04em margin-04em bg-light">.br-</code>before the borders widths</li>
+          <li>Add<code class="padding-04em margin-04em bg-light">.br-top/bottom/left/right</code>before the borders
+            widths to add the border only for a specific side</li>
+        </ol>
+        <h4>Borders widths</h4>
+        <ul class="margin-left-12px padding-12px">
+          <li>Px sizes : for each borders widths from 01px = 0.1px to 09px = 0.9px.</li>
+          <li>Px sizes : for each borders widths from 1px to 20px.</li>
+          <li>Em sizes : for each borders widths from 01em = 0.1em to 09em = 0.9em.</li>
+          <li>Em sizes : for each borders widths from 1em to 20em.</li>
+          <li>Rem sizes : for each borders widths from 01rem = 0.1rem to 09rem = 0.9rem.</li>
+          <li>Rem sizes : for each borders widths from 1rem to 20rem.</li>
+        </ul>
+      </p>
+      <br>
+      <div style="line-height: 1.5;" id="panel_18">
+        <h3>Example</h3>
+        <br>
+        <div class="bg-dark br-left-7px codeSize padding-12px">
+          <p>&lt;div class=&quot;container bg-cyan br-14px&quot;&gt;</p>
+          <p>A text here</p>
+          <p>&lt;/div&gt;</p>
+          <p>&lt;div class=&quot;container bg-cyan br-top-04em&quot;&gt;</p>
+          <p>A text here</p>
+          <p>&lt;/div&gt;</p>
+          <p>&lt;div class=&quot;container bg-cyan br-right-1em&quot;&gt;</p>
+          <p>A text here</p>
+          <p>&lt;/div&gt;</p>
+          <p>&lt;div class=&quot;container bg-cyan br-bottom-2rem&quot;&gt;</p>
+          <p>A text here</p>
+          <p>&lt;/div&gt;</p>
+          <p>&lt;div class=&quot;container bg-cyan br-left-20px&quot;&gt;</p>
+          <p>A text here</p>
+          <p>&lt;/div&gt;</p>
+        </div>
+        <br>
+        <h3>Output</h3>
+        <div class="container bg-cyan br-14px">
+          A text here
+        </div>
+        <br>
+        <div class="container bg-cyan br-top-04em">
+          A text here
+        </div>
+        <br>
+        <div class="container bg-cyan br-right-1em">
+          A text here
+        </div>
+        <br>
+        <div class="container bg-cyan br-bottom-2rem">
+          A text here
+        </div>
+        <br>
+        <div class="container bg-cyan br-left-20px">
+          A text here
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+
+  <!-- Round -->
+  <div>
+    <button class="accordion round-20px padding-17px"><span
+        class="material-symbols margin-right-12px">rounded_corner</span>Round<sub class="tag">new</sub></button>
+    <div class="panel">
+      <p>How to use rounded corners:
+        <ol class="margin-left-12px padding-12px">
+          <li>Add<code class="padding-04em margin-04em bg-light">.round-</code>before the border radius value</li>
+        </ol>
+        <h4>Border radius value</h4>
+        <ul class="margin-left-12px padding-12px">
+          <li>Px sizes : for each border radius value from 01px = 0.1px to 09px = 0.9px.</li>
+          <li>Px sizes : for each border radius value from 1px to 50px.</li>
+          <li>Em sizes : for each border radius value from 01em = 0.1em to 09em = 0.9em.</li>
+          <li>Em sizes : for each border radius value from 1em to 50em.</li>
+          <li>Rem sizes : for each border radius value from 01rem = 0.1rem to 09rem = 0.9rem.</li>
+          <li>Rem sizes : for each border radius value from 1rem to 50rem.</li>
+        </ul>
+      </p>
+      <br>
+      <div style="line-height: 1.5;" id="panel_19">
+        <h3>Example</h3>
+        <br>
+        <div class="bg-dark br-left-7px codeSize padding-12px">
+          <p>&lt;div class=&quot;container padding-1em bg-cyan round-50px&quot;&gt;</p>
+          <p>A text here</p>
+          <p>&lt;/div&gt;</p>
+          <p>&lt;div class=&quot;container padding-1em bg-cyan round-04em&quot;&gt;</p>
+          <p>A text here</p>
+          <p>&lt;/div&gt;</p>
+          <p>&lt;div class=&quot;container padding-1em bg-cyan round-1em&quot;&gt;</p>
+          <p>A text here</p>
+          <p>&lt;/div&gt;</p>
+          <p>&lt;div class=&quot;container padding-1em bg-cyan round-2rem&quot;&gt;</p>
+          <p>A text here</p>
+          <p>&lt;/div&gt;</p>
+          <p>&lt;div class=&quot;container padding-1em bg-cyan round-6px&quot;&gt;</p>
+          <p>A text here</p>
+          <p>&lt;/div&gt;</p>
+        </div>
+        <br>
+        <h3>Output</h3>
+        <div class="container padding-1em bg-cyan round-50px">
+          A text here
+        </div>
+        <br>
+        <div class="container padding-1em bg-cyan round-04em">
+          A text here
+        </div>
+        <br>
+        <div class="container padding-1em bg-cyan round-1em">
+          A text here
+        </div>
+        <br>
+        <div class="container padding-1em bg-cyan round-2rem">
+          A text here
+        </div>
+        <br>
+        <div class="container padding-1em bg-cyan round-6px">
+          A text here
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+
+
+  <!-- Notes -->
+  <div>
+    <button class="accordion round-20px padding-17px"><span
+        class="material-symbols margin-right-12px">sticky_note_2</span>Notes</button>
+    <div class="panel">
+      <h4>Notes</h4>
+      <p>How to use note:
+        <ol class="margin-left-12px padding-12px">
+          <li>Add<code class="padding-04em margin-04em bg-light">.note</code>Class to make a beautiful note container.
+          </li>
+        </ol>
+      </p>
+      <br>
+      <div style="line-height: 1.5;" id="panel_20">
+        <h5>Example</h5>
+        <p>We add in those examples we add border class.</p>
+        <br>
+        <div class="bg-dark br-left-7px codeSize padding-12px">
+          <p>&lt;div class=&quot;note bg-yellow br-7px&quot;&gt;</p>
+          <p>A text here (we don't suggest using the border for all sides)</p>
+          <p>&lt;/div&gt;</p>
+          <p>&lt;div class=&quot;note bg-red br-top-7px&quot;&gt;</p>
+          <p>A text here</p>
+          <p>&lt;/div&gt;</p>
+          <p>&lt;div class=&quot;note bg-pink br-right-7px&quot;&gt;</p>
+          <p>A text here</p>
+          <p>&lt;/div&gt;</p>
+          <p>&lt;div class=&quot;note bg-pinterest br-bottom-7px&quot;&gt;</p>
+          <p>A text here</p>
+          <p>&lt;/div&gt;</p>
+          <p>&lt;div class=&quot;note bg-reddit br-left-7px&quot;&gt;</p>
+          <p>A text here</p>
+          <p>&lt;/div&gt;</p>
+        </div>
+        <br>
+        <h3>Output</h3>
+        <div class="note bg-yellow br-7px">
+          A text here (we don't suggest using the border for all sides)
+        </div>
+        <br>
+        <div class="note bg-red br-top-7px">
+          A text here
+        </div>
+        <br>
+        <div class="note bg-pink br-right-7px">
+          A text here
+        </div>
+        <br>
+        <div class="note bg-pinterest br-bottom-7px">
+          A text here
+        </div>
+        <br>
+        <div class="note bg-reddit br-left-7px">
+          A text here
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+
+  <!-- Columns -->
+  <div>
+    <button class="accordion round-20px padding-17px"><span
+        class="material-symbols margin-right-12px">view_week</span>Columns</button>
+    <div class="panel">
+      <p>How to use columns:
+        <ol class="margin-left-12px padding-12px" style="line-height: 2;">
+          <li>Add<code class="padding-04em margin-04em bg-light">.cols-container</code>as a parent class.</li>
+          <li>Add<code class="padding-04em margin-04em bg-light">.col-1/-2/-3/-4</code>to add equal width for each
+            column.</li>
+          <li>col-1 width : 100%</li>
+          <li>col-2 width : 50%</li>
+          <li>col-3 width : 33.33%</li>
+          <li>col-4 width : 25%</li>
+          <li>To use custom columns width add<code
+              class="padding-04em margin-04em bg-light">.col-5vw/-10vw/-15vw/.../-90vw/-100vw</code>.</li>
+          <li>N.B : <code class="padding-04em margin-04em bg-light">.col-8vw or -23vw or -18vw or ...or -92vw or
+              -98vw</code> are not accepted.</li>
+          <li>To use space between columns add<code
+              class="padding-04em margin-04em bg-light">.col-space-(numbers)-(unit)</code>.</li>
+          <li>Unites : em/px/rem</li>
+          <li>Numbers less than 1 : From 01 / 015 / 020 / 025 / 030 / ... / 085 / 090 / 095 --> 01 = 0.1</li>
+          <li>Numbers more than 1 : From 1 / 2 / 3 / 4 / 5 / ... / 8 / 9 / 10 --> 1 = 1</li>
+        </ol>
+      </p>
+      <br>
+      <div style="line-height: 1.5;" id="panel_21">
+        <h5>Example</h5>
+        <p>We add in those examples we add border class.</p>
+        <br>
+        <div class="bg-dark br-left-7px codeSize padding-12px">
+          &lt;!-- cols-container with 1 columns--&gt;<br>
+          &lt;div class=&quot;cols-container col-space-03-em&quot;&gt;<br>
+          &lt;div class=&quot;bg-light padding-16 col-1&quot;&gt; 100% &lt;/div&gt;<br>
+          &lt;/div&gt;<br>
+          &lt;!-- cols-container with 2 columns--&gt;<br>
+          &lt;div class=&quot;cols-container col-space-03-em&quot;&gt;<br>
+          &lt;div class=&quot;bg-light padding-16 col-2&quot;&gt; 50% &lt;/div&gt;<br>
+          &lt;div class=&quot;bg-light padding-16 col-2&quot;&gt; 50% &lt;/div&gt;<br>
+          &lt;/div&gt;<br>
+          &lt;!-- cols-container with 3 columns--&gt;<br>
+          &lt;div class=&quot;cols-container col-space-03-em&quot;&gt;<br>
+          &lt;div class=&quot;bg-light padding-16 col-3&quot;&gt; 33.33% &lt;/div&gt;<br>
+          &lt;div class=&quot;bg-light padding-16 col-3&quot;&gt; 33.33% &lt;/div&gt;<br>
+          &lt;div class=&quot;bg-light padding-16 col-3&quot;&gt; 33.33% &lt;/div&gt;<br>
+          &lt;/div&gt;<br>
+          &lt;!-- cols-container with 4 columns--&gt;<br>
+          &lt;div class=&quot;cols-container col-space-03-em&quot;&gt;<br>
+          &lt;div class=&quot;bg-light padding-16 col-4&quot;&gt; 25% &lt;/div&gt;<br>
+          &lt;div class=&quot;bg-light padding-16 col-4&quot;&gt; 25% &lt;/div&gt;<br>
+          &lt;div class=&quot;bg-light padding-16 col-4&quot;&gt; 25% &lt;/div&gt;<br>
+          &lt;div class=&quot;bg-light padding-16 col-4&quot;&gt; 25% &lt;/div&gt;<br>
+          &lt;/div&gt;<br>
+          &lt;!-- cols-container with 3 columns with custom widths and 0.3em for the gaps--&gt;<br>
+          &lt;div class=&quot;cols-container col-space-03-em&quot;&gt;<br>
+          &lt;div class=&quot;bg-light padding-16 col-30vw&quot;&gt; 30% &lt;/div&gt;<br>
+          &lt;div class=&quot;bg-light padding-16 col-25vw&quot;&gt; 25% &lt;/div&gt;<br>
+          &lt;div class=&quot;bg-light padding-16 col-45vw&quot;&gt; 45% &lt;/div&gt;<br>
+          &lt;/div&gt;<br>
+        </div>
+        <br>
+        <h3>Output</h3>
+        <p>N.B : width for all columns for mobile devices is 100%.</p><br>
+        <!-- cols-container with 1 columns-->
+        <div class="cols-container col-space-03-em">
+          <div class="bg-light padding 16 col-1"> 100% </div>
+        </div><br>
+        <!-- cols-container with 2 columns-->
+        <div class="cols-container col-space-03-em">
+          <div class="bg-light padding 16 col-2"> 50% </div>
+          <div class="bg-light padding 16 col-2"> 50% </div>
+        </div><br>
+        <!-- cols-container with 3 columns-->
+        <div class="cols-container col-space-03-em">
+          <div class="bg-light padding 16 col-3"> 33.33% </div>
+          <div class="bg-light padding 16 col-3"> 33.33% </div>
+          <div class="bg-light padding 16 col-3"> 33.33% </div>
+        </div><br>
+        <!-- cols-container with 4 columns-->
+        <div class="cols-container col-space-03-em">
+          <div class="bg-light padding 16 col-4"> 25% </div>
+          <div class="bg-light padding 16 col-4"> 25% </div>
+          <div class="bg-light padding 16 col-4"> 25% </div>
+          <div class="bg-light padding 16 col-4"> 25% </div>
+        </div><br>
+        <!-- cols-container with 3 columns with specific widths-->
+        <div class="cols-container col-space-03-em">
+          <div class="bg-light padding 16 col-30vw"> 30% </div>
+          <div class="bg-light padding 16 col-25vw"> 25% </div>
+          <div class="bg-light padding 16 col-45vw"> 45% </div>
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+
+  <!-- Grids -->
+  <div>
+    <button class="accordion round-20px padding-17px"><span
+        class="material-symbols margin-right-12px">dashboard</span>Grids</button>
+    <div class="panel">
+      <p>How to use Grids:
+        <ol class="margin-left-12px padding-12px" style="line-height: 2;">
+          <li>Add<code class="padding-04em margin-04em bg-light">.grid-container</code>as a parent class.</li>
+          <li>Add<code class="padding-04em margin-04em bg-light">.col-span-1/-2/-3</code>or<code
+              class="padding-04em margin-04em bg-light">.row-span-1/-2/-3</code>to build Masonry Layout.</li>
+          <li>To use space between Grids add<code
+              class="padding-04em margin-04em bg-light">.grid-space-(numbers)-(unit)</code>.</li>
+          <li>Unites : em/px/rem</li>
+          <li>Numbers less than 1 : From 01 / 015 / 020 / 025 / 030 / ... / 085 / 090 / 095 --> 01 = 0.1</li>
+          <li>Numbers more than 1 : From 1 / 2 / 3 / 4 / 5 / ... / 8 / 9 / 10 --> 1 = 1</li>
+        </ol>
+      </p>
+      <br>
+      <div style="line-height: 1.5;" id="panel_22">
+        <h3>Example</h3>
+        <br>
+        <div class="bg-dark br-left-7px codeSize padding-12px">
+          &lt;!-- grid-container --&gt;<br>
+          &lt;div class=&quot;grid-container grid-space-03-em&quot;&gt;<br>
+          &lt;div class=&quot;grid-content bg-red row-span-2&quot;&gt;
+          ...
+          &lt;/div&gt;<br>
+          &lt;div class=&quot;grid-content bg-red col-span-2&quot;&gt;
+          ...
+          &lt;/div&gt;<br>
+          &lt;div class=&quot;grid-content bg-red&quot;&gt;
+          ...
+          &lt;/div&gt;<br>
+          &lt;div class=&quot;grid-content bg-red&quot;&gt;
+          ...
+          &lt;/div&gt;<br>
+          &lt;/div&gt;<br>
+        </div>
+        <br>
+        <h3>Output</h3>
+        <p>N.B : width for all grid-content for mobile devices is 100%.</p><br>
+        <!-- grid-container -->
+        <div class="grid-container grid-space-03-em">
+          <div class="grid-content bg-red row-span-2"> ... </div>
+          <div class="grid-content bg-red col-span-2"> ... </div>
+          <div class="grid-content bg-red"> ... </div>
+          <div class="grid-content bg-red"> ... </div>
+        </div>
+      </div>
+      <br>
+    </div>
+  </div>
+
+  <!-- icons -->
+  <div>
+    <button class="accordion round-20px padding-17px"><span
+        class="material-symbols margin-right-12px">interests</span>Icons</button>
+    <div class="panel">
+      <p>
+        We integrate Google material-symbols-rounded for the icons.
+      </p>
+      <br>
+      <div style="line-height: 1.5;" id="panel_23">
+        <h3>Example</h3>
+        <div class="bg-dark br-left-7px codeSize padding-12px">
+          &lt;span style="font-size:50px;" class=&quot;material-symbols&quot;&gt;
+          home
+          &lt;/span&gt;<br>
+          &lt;span style="font-size:50px;" class=&quot;material-symbols&quot;&gt;
+          docs
+          &lt;/span&gt;<br>
+          &lt;span style="font-size:50px;" class=&quot;material-symbols&quot;&gt;
+          block
+          &lt;/span&gt;<br>
+          &lt;span style="font-size:50px;" class=&quot;material-symbols&quot;&gt;
+          lunch_dining
+          &lt;/span&gt;<br>
+          &lt;span style="font-size:50px;" class=&quot;material-symbols&quot;&gt;
+          devices
+          &lt;/span&gt;<br>
+        </div>
+        <br>
+        <h3>Output</h3>
+        <span style="font-size:50px;" class="material-symbols">home</span>
+        <span style="font-size:50px;" class="material-symbols">docs</span>
+        <span style="font-size:50px;" class="material-symbols">block</span>
+        <span style="font-size:50px;" class="material-symbols">lunch_dining</span>
+        <span style="font-size:50px;" class="material-symbols">devices</span>
+      </div>
+      <br>
+    </div>
+  </div>
+
+  <!-- spacer -->
+  <div>
+    <button class="accordion round-20px padding-17px"><span
+        class="material-symbols margin-right-12px">view_agenda</span>Spacer & hr<sub class="tag">new</sub></button>
+    <div class="panel">
+      <p>How to use Spacer and hr:
+        <ol class="margin-left-12px padding-12px">
+          <li>Add<code class="padding-04em margin-04em bg-light">.spacer-</code>before the spacer sizes value</li>
+          <li>Add<code class="padding-04em margin-04em bg-light">.hr</code>class to an &lt;hr&gt; tage</li>
+        </ol>
+        <h4>Spacer sizes</h4>
+        <ul class="margin-left-12px padding-12px">
+          <li>Px sizes : for each spacer sizes from 01px = 0.1px to 09px = 0.9px.</li>
+          <li>Px sizes : for each spacer sizes from 1px to 10px.</li>
+          <li>Em sizes : for each spacer sizes from 01em = 0.1em to 09em = 0.9em.</li>
+          <li>Em sizes : for each spacer sizes from 1em to 10em.</li>
+          <li>Rem sizes : for each spacer sizes from 01rem = 0.1rem to 09rem = 0.9rem.</li>
+          <li>Rem sizes : for each spacer sizes from 1rem to 10rem.</li>
+        </ul>
+      </p>
+      <br>
+      <div style="line-height: 1.5;" id="panel_24">
+        <h3>Example</h3>
+        <br>
+        <div class="bg-dark br-left-7px codeSize padding-12px">
+          <p>&lt;div class=&quot;container padding-06em bg-red&quot;&gt;</p>
+          <p>A text here</p>
+          <p>&lt;/div&gt;</p>
+          <p>&lt;div class=&quot;spacer-04em&quot;&gt;
+          <p>&lt;div class=&quot;container padding-06em bg-red&quot;&gt;</p>
+          <p>A text here</p>
+          <p>&lt;/div&gt;</p>
+          <p>&lt;div class=&quot;spacer-1em&quot;&gt;
+          <p>&lt;div class=&quot;container padding-06em bg-red&quot;&gt;</p>
+          <p>A text here</p>
+          <p>&lt;/div&gt;</p>
+          <p>&lt;div class=&quot;spacer-2px&quot;&gt;
+          <p>&lt;div class=&quot;container padding-06em bg-red&quot;&gt;</p>
+          <p>A text here</p>
+          <p>&lt;/div&gt;</p>
+          <p>&lt;div class=&quot;spacer-10px&quot;&gt;
+          <p>&lt;div class=&quot;container padding-06em bg-red&quot;&gt;</p>
+          <p>A text here</p>
+          <p>&lt;/div&gt;</p>
+          <p>&lt;hr class="hr"&gt;</p>
+          <p>&lt;hr style="width:50% !important;" class="hr"&gt;</p>
+          <p>&lt;hr style="width:100% !important;" class="hr"&gt;</p>
+        </div>
+        <br>
+        <h3>Output</h3>
+        <div class="container padding-06em bg-red">
+          A text here
+        </div>
+        <div class="spacer-04em"></div>
+        <div class="container padding-06em bg-red">
+          A text here
+        </div>
+        <div class="spacer-1em"></div>
+        <div class="container padding-06em bg-red">
+          A text here
+        </div>
+        <div class="spacer-2px"></div>
+        <div class="container padding-06em bg-red">
+          A text here
+        </div>
+        <div class="spacer-10px"></div>
+        <div class="container padding-06em bg-red">
+          A text here
+        </div><br>
+        <hr class="hr">
+        <hr style="width:50% !important;" class="hr">
+        <hr style="width:100% !important;" class="hr">
+      </div>
+      <br>
+    </div>
+  </div>
+
+  <!-- Tabs -->
+  <div>
+    <button class="accordion round-20px padding-17px"><span
+      class="material-symbols margin-right-12px">tab</span>Tabs<sub class="tag">new</sub></button>
+
+    <div class="panel">
+      <p>
+        To add tabs to your HTML page you must specify the tab's container by adding <code class="padding-04em margin-04em bg-light">.tabs</code>.<div class="spacer-04em"></div>
+        Add to list of buttons the following class<code class="padding-04em margin-04em bg-light">.tab-btns</code>as a parent class,
+        add to the buttons<code class="padding-04em margin-04em bg-light">.tab</code> class and <code class="padding-04em margin-04em bg-light">.active</code> class to the opened Tab.<div class="spacer-04em"></div>
+        Add the content class by using<code class="padding-04em margin-04em bg-light">.tab-content</code> as the container of the content.<div class="spacer-04em"></div>
+        To add colors add <code class="padding-04em margin-04em bg-light">.tabs-</code>followed by the color's name. 
+        <div class="spacer-04em"></div>
+        Add unique <code class="padding-04em margin-04em bg-light">id="..."</code> to the <code class="padding-04em margin-04em bg-light">.tab-content</code>, to target the id using the tab button, add <code class="padding-04em margin-04em bg-light">target-id="..tab-content-id.."</code> Attribute to the <code class="padding-04em margin-04em bg-light">.tab</code> class.
+      </p>
+      <br>
+      <div style="line-height: 1.5;" id="panel_25">
+        <h3>Example</h3>
+        <br>
+        <div class="bg-dark br-left-7px codeSize padding-12px">
+                  
+            <p>&lt;div class=&quot;tabs tabs-cyan&quot;&gt;</p>
+            <p>&lt;ul class=&quot;tab-btns&quot;&gt;</p>
+                <p>&lt;li class=&quot;tab active&quot; target-id=&quot;tab1&quot;&gt;Tab 1&lt;/li&gt;</p>
+                <p>&lt;li class=&quot;tab&quot; target-id=&quot;tab2&quot;&gt;Tab 2&lt;/li&gt;</p>
+                <p>&lt;li class=&quot;tab&quot; target-id=&quot;tab3&quot;&gt;Tab 3&lt;/li&gt;</p>
+                <p>&lt;li class=&quot;tab&quot; target-id=&quot;tab4&quot;&gt;Tab 4&lt;/li&gt;</p>
+                <p>&lt;li class=&quot;tab&quot; target-id=&quot;tab5&quot;&gt;Tab 5&lt;/li&gt;</p>
+            <p>&lt;/ul&gt;</p><br>
+
+            <p>&lt;div class=&quot;tab-content&quot; id=&quot;tab1&quot;&gt;</p>
+                <p>&lt;b&gt;Tabs 1&lt;/b&gt;&lt;br&gt;</p>
+                <p>&lt;p&gt;Text here&lt;/p&gt;</p>
+            <p>&lt;/div&gt;</p><br>
+
+            <p>&lt;div class=&quot;tab-content&quot; id=&quot;tab2&quot;&gt;</p>
+                <p>&lt;b&gt;Tabs 2&lt;/b&gt;&lt;br&gt;</p>
+                <p>&lt;p&gt;Text here&lt;/p&gt;</p>
+
+            <p>&lt;/div&gt;</p><br>
+
+            <p>&lt;div class=&quot;tab-content&quot; id=&quot;tab3&quot;&gt;</p>
+                <p>&lt;b&gt;Tabs 3&lt;/b&gt;&lt;br&gt;</p>
+                <p>&lt;p&gt;Text here&lt;/p&gt;</p>
+            <p>&lt;/div&gt;</p><br>
+            <p>&lt;div class=&quot;tab-content&quot; id=&quot;tab4&quot;&gt;</p>
+                <p>&lt;b&gt;Tabs 4&lt;/b&gt;&lt;br&gt;</p>
+                <p>&lt;p&gt;Text here&lt;/p&gt;</p>
+            <p>&lt;/div&gt;</p><br>
+            <p>&lt;div class=&quot;tab-content&quot; id=&quot;tab5&quot;&gt;</p>
+                <p>&lt;b&gt;Tabs 5&lt;/b&gt;&lt;br&gt;</p>
+                <p>&lt;p&gt;Text here&lt;/p&gt;</p>
+            <p>&lt;/div&gt;</p>
+            <p>&lt;/div&gt;</p>
+
+        </div>
+        <br>
+        <h3>Output</h3>
+          
+          <div class="tabs tabs-cyan">
+            <ul class="tab-btns">
+                <li class="tab active" target-id="tab1">Tab 1</li>
+                <li class="tab" target-id="tab2">Tab 2</li>
+                <li class="tab" target-id="tab3">Tab 3</li>
+                <li class="tab" target-id="tab4">Tab 4</li>
+                <li class="tab" target-id="tab5">Tab 5</li>
+            </ul>
+        
+            <div class="tab-content" id="tab1">
+                <b>Tabs 1</b><br>
+                <p>Text here</p>
+            </div>
+        
+            <div class="tab-content" id="tab2">
+                <b>Tabs 2</b><br>
+                <p>Text here</p>            
+
+            </div>
+        
+            <div class="tab-content" id="tab3">
+                <b>Tabs 3</b><br>
+                <p>Text here</p>
+            </div>
+            <div class="tab-content" id="tab4">
+                <b>Tabs 4</b><br>
+                <p>Text here</p>
+            </div>
+            <div class="tab-content" id="tab5">
+                <b>Tabs 5</b><br>
+                <p>Text here</p>
+            </div>
+        </div>
+  
+      </div>
+    </div>
+      
+  </div>
+
+  <!-- Opacity -->
+  <div>
+    <button class="accordion round-20px padding-17px"><span
+        class="material-symbols margin-right-12px">timelapse</span>Opacity <sub class="tag">new</sub></button>
+    <div class="panel">
+      <p>To use opacity class add<code class="padding-04em margin-04em bg-light">.op-</code>Class befor the number value.</p>
+      <p>The numbers values : <div class="spacer-04em"></div>
+        <code class="padding-04em margin-04em bg-light">0 , 5 , 10 , 15 , ... , 90 , 95 , 100</code>, For each number in the numbers values is define the percentage of the opacity.
+      </p>
+      <p>To use the hover for the opacity class add <code class="padding-04em margin-04em bg-light">.op-hover</code>Class</p>
+
+      <h3>Example</h3>
+      <div style="line-height: 1.5;" class="bg-dark br-left-7px codeSize padding-12px" id="panel_26">
+        <p>&lt;div&gt;</p>
+          <p>&lt;p class=&quot;op-50&quot;&gt;Text opacity 50%&lt;/p&gt;</p>
+          <p>&lt;p class=&quot;op-50 op-hover&quot;&gt;Text Hover opacity 50%&lt;/p&gt;</p>
+        <p>&lt;/div&gt;</p>
+      </div>
+      <h3>Output</h3>
+        <div>
+          <p>Hover the 2<sup>nd</sup> Text</p>
+          <p class="op-50">Text opacity 50%</p>
+          <p class="op-50 op-hover">Text Hover opacity 50%</p>
+        </div>
+    </div>
+  </div>
+
+  <!-- Typography -->
+  <div>
+    <button class="accordion round-20px padding-17px"><span
+        class="material-symbols margin-right-12px">text_format</span>Typography <sub class="tag">new</sub></button>
+    <div class="panel">
+      <p class="fot-md fot-wg--bd">Font size</p>
+      <p>To use the font-size class add<code class="padding-04em margin-04em bg-light">.fot-</code>Class befor the number's value or the Size's name.</p>
+      <p><b>Font-size</b> Size's Names : <div class="spacer-04em"></div>
+        <ul class="margin-left-12px">
+          <li>xxsm : 0.3em</li>
+          <li>xsm : 0.5em</li>
+          <li>sm : 0.7em</li>
+          <li>nm : 0.9em</li>
+          <li>smd : 1.1em</li>
+          <li>md : 1.3em</li>
+          <li>lg : 1.5em</li>
+          <li>xlg : 1.7em</li>
+          <li>xxlg : 1.9em</li>
+          <li>xxxlg : 2.1em</li>
+          <li>ulg : 2.3em</li>
+          <li>umlg : 2.5em</li>
+        </ul>
+      </p>
+      <p>The number's values : <div class="spacer-04em"></div>
+        the number are from 1 to 30 followed by the size unit em/px/rem
+      </p>
+      <p class="fot-md fot-wg--bd">Font weight</p>
+      <p>To use the font-weight class add<code class="padding-04em margin-04em bg-light">.fot-wg--</code>Class befor the size's name.</p>
+      <p><b>Font-weight</b> Size's Names : <div class="spacer-04em"></div>
+        <ul class="margin-left-12px">
+          <li>lt : 100</li>
+          <li>lt-md : 250</li>
+          <li>nm : 400</li>
+          <li>md : 550</li>
+          <li>bd : 700</li>
+          <li>xbd : 850</li>
+        </ul>
+      </p>
+
+      <h3>Example</h3>
+      <div style="line-height: 1.5;" class="bg-dark br-left-7px codeSize padding-12px" id="panel_27">
+        &lt;p class=&quot;fot-xxxlg&quot;&gt;Extra Large Text&lt;/p&gt;<br>
+        &lt;p class=&quot;fot-27px&quot;&gt;Font size 27px&lt;/p&gt;<br>
+        &lt;p class=&quot;fot-wg--lt&quot;&gt;Light text&lt;/p&gt;<br>
+        &lt;p class=&quot;fot-wg--bd&quot;&gt;Bold text&lt;/p&gt;<br>
+      </div>
+      <h3>Output</h3>
+        <p class="fot-xxxlg">Extra Large Text</p>
+        <p class="fot-27px">Font size 27px</p>
+        <p class="fot-wg--lt">Light text</p>
+        <p class="fot-wg--bd">Bold text</p>
+    </div>
+  </div>
+
+  <!-- Accordion -->
+  <div>
+    <button class="accordion round-20px padding-17px"><span
+        class="material-symbols margin-right-12px">arrow_downward</span>Accordion <sub class="tag">new</sub></button>
+    <div class="panel">
+      <p>To use accordion add <code class="padding-04em margin-04em bg-light">.accordion</code>class to a button tag.</p>
+      <p>To use The collapsible panel add <code class="padding-04em margin-04em bg-light">.panel</code>class to the next tag after the button.</p>
+      <p>To use The accordion button colors effect add <code class="padding-04em margin-04em bg-light">.accordion-{color-name}</code>class,<br>
+      Or to use outline buttons add<code class="padding-04em margin-04em bg-light">.accordion-out-{color-name}</code></p>
+      <h3>Example</h3>
+      <div style="line-height: 1.5;" class="bg-dark br-left-7px codeSize padding-12px" id="panel_28">
+        &lt;section&gt;<br>
+        &lt;button class=&quot;accordion round-04em accordion-primary&quot;&gt;Accordion&lt;/button&gt;<br>
+          &lt;div class=&quot;panel round-04em bg-dark&quot;&gt;<br>
+            This is the panel.&lt;br&gt;<br>
+            Text Text&lt;br&gt;<br>
+            Text text&lt;br&gt;<br>
+          &lt;/div&gt;<br>
+        &lt;/section&gt;<br>  
+        &lt;section&gt;<br>
+        &lt;button class=&quot;accordion round-04em accordion-out-primary&quot;&gt;Accordion&lt;/button&gt;<br>
+          &lt;div class=&quot;panel round-04em bg-dark&quot;&gt;<br>
+            This is the panel.&lt;br&gt;<br>
+            Text Text&lt;br&gt;<br>
+            Text text&lt;br&gt;<br>
+          &lt;/div&gt;<br>
+        &lt;/section&gt;<br> 
+      </div>
+      <h3>Output</h3>
+          <button class="accordion round-04em accordion-primary">Accordion</button>
+          <div class="panel round-04em bg-dark">
+            This is the panel.<br>
+            Text Text<br>
+            Text text<br>
+          </div>
+          <button class="accordion round-04em accordion-out-primary">Accordion</button>
+          <div class="panel round-04em bg-dark">
+            This is the panel.<br>
+            Text Text<br>
+            Text text<br>
+          </div>
+    </div>
+  </div>
+
+  <!-- Z-Index -->
+  <div>
+    <button class="accordion round-20px padding-17px"><span
+        class="material-symbols margin-right-12px">arrow_downward</span>Z-Index <sub class="tag">new</sub></button>
+    <div class="panel">
+      <p>To use accordion add <code class="padding-04em margin-04em bg-light">.z-index-</code>class followed by the number's value.</p>
+      <p>The number's values are from -2000 to 2000.</p>
+      <h3>Example</h3>
+      <div style="line-height: 1.5;" class="bg-dark br-left-7px codeSize padding-12px" id="panel_29">
+        &lt;div class=&quot;display-container&quot;&gt;<br>
+          &lt;div style=&quot;width:30px; height:30px;&quot; class=&quot;display-top-left bg-dark z-index--1&quot;&gt;&lt;/div&gt;<br>
+          &lt;div style=&quot;width:30px; height:30px;&quot; class=&quot;display-top-left bg-red margin-4px z-index-1&quot;&gt;&lt;/div&gt;<br>
+          &lt;div style=&quot;width:30px; height:30px;&quot; class=&quot;display-top-left bg-reddit margin-8px z-index-2&quot;&gt;&lt;/div&gt;<br>
+        &lt;/div&gt; <br>
+      </div>
+      <h3>Output</h3>
+      <div>
+        <div class="display-container z-index-2000">
+          <div style="width:30px; height:30px;" class="display-top-left bg-dark z-index--1"></div>
+          <div style="width:30px; height:30px;" class="display-top-left bg-red margin-4px z-index-1"></div>
+          <div style="width:30px; height:30px;" class="display-top-left bg-reddit margin-8px z-index-2"></div>
+        </div> 
+      </div><br><br><br>
+        
+    </div>
+  </div>
+
+
+
+
+
+<footer class="footer">
+  <h4>copyrights &copy; <b>Get Lookover<sup><small>TM</small></sup></b>, 2022</h4>
+  <h5><a class="a" href="https://www.facebook.com/groups/664140997952673"><span class="material-symbols margin-right-12px fot-lg">group</span>Facebook Community Group</a></h5>
+</footer>
+
+
+  <script src="get-lookover-v0.5/js/get-lookover.min.js"></script>
+  <script src="js/codecolor.js"></script>
+</body>
+</html>

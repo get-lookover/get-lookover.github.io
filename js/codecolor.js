@@ -27,6 +27,9 @@
     codeColor(document.getElementById("panel_27"));
     codeColor(document.getElementById("panel_28"));
     codeColor(document.getElementById("panel_29"));
+    codeColor(document.getElementById("panel_30"));
+    codeColor(document.getElementById("panel_31"));
+    codeColor(document.getElementById("panel_32"));
 function codeColor(t, s) {
     function r(t, s, r, n, e) {
         for (var l, u, o = "", a = []; t.search(s) > -1;) l = t.search(s), u = t.indexOf(r, l), -1 == u && (u = t.length), e ? (a.push(n(t.substring(l, u + r.length))), t = t.substring(0, l) + e + t.substr(u + r.length)) : (o += t.substring(0, l), o += n(t.substring(l, u + r.length)), t = t.substr(u + r.length));

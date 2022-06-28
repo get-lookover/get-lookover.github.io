@@ -4,12 +4,10 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="google-site-verification" content="gJC5gT8VPn7OLhjK-LP4Vr6BbGZ46MFfcV1nfSMLwEw"/>
-	<meta name="googlebot" content="index"/>
-	<meta name="description" content="Get Lookover is an open source CSS/JS framework for designing modern websites Faster and easly"/>
-	<meta name="robots" content="index,follow">
-	<meta name="keywords" content="CSS Framework, New CSS framework, CSS, CSS3, Js, jquery plugins, Get Lookover"/>
-	<link rel="canonical" href="http://get-lookover.github.io/index.html"/>
+	<meta name="Keywords" content="HTML, CSS, JS, Get Lookover, Colors, Tutorials">
+	<meta name="description" content="Open Source CSS/JS Framework for designing a modern Website pages.">
+	<meta name="google-site-verification" content="gJC5gT8VPn7OLhjK-LP4Vr6BbGZ46MFfcV1nfSMLwEw" />
+	<link rel="icon" href="favicon.png" type="image/x-icon">
 	<!-- Google Tag Manager -->
 	<script>
 		(function (w, d, s, l, i) {
@@ -41,72 +39,66 @@
 	</script>
 	<!-- End Google Tag Manager -->
 	<title>Get lookover</title>
-	<!-- <link rel="stylesheet" href="css/getlookover.css"> -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/get-lookover/cdn@v0.1/css/get-lookover.min.css">
-  	<link rel="stylesheet" href="/css/style.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/gh/get-lookover/cdn@v0.1/js/get-lookover.min.js"></script>
+	<link rel="stylesheet" href="get-lookover-v0.5/css/get-lookover.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="preload" href="fonts/icons/material-symbol-rounded.woff2">
+	<link rel="preload" href="fonts/twcenmt/twcenmt.eot">
+	<link rel="preload" href="fonts/twcenmt/twcenmt.svg">
+	<link rel="preload" href="fonts/twcenmt/twcenmt.ttf">
+	<link rel="preload" href="fonts/twcenmt/twcenmt.woff">
+	<link rel="preload" href="fonts/twcenmt/twcenmt.woff2">
+	<script src="js/jquery.min.js"></script>
+	<style>
+		@media (max-width:600px){
+			h1{
+				display:flex;
+				flex-direction: column;
+				gap:10px;
+			}
+		}
+	</style>
 </head>
 
-<body class="col-space-03-em">
-	
-	<header class="navbar right-navbar display-container color-dark-bg sticky" id="navbar">
-		<script>
-			$("header").load("header.html");
-		</script>
-	</header>
-	
-	<section class="bodySections color-light-text">
-		<script>
-			$("section").load("v01.html");
-		</script>	
+<body>
+	<section>
+		
+		<h1 style=" display:flex;gap:10px; align-items:center; justify-content:center;width:100%;max-width:inherit;text-align: center;font-size: 3em;"><img style="width:2em;" src="./logo.png" alt="Get Lookover icon"> Get Lookover</h1>
+		
+		<div class="timeline" id="releases"></div>
+		
 	</section>
-
-	<footer class="color-dark-bg cols-container padding-16 col-space-03-em">
-		<script>
-			$("footer").load("footer.html");
-		</script>
-	</footer>
-
-
-
-	<div id="snackbar-01">Current Version 0.1</div>
-	<div id="snackbar-02">Version 0.2</div>
-	<div id="snackbar-03">Version 0.3</div>
-	<div id="snackbar-04">Version 0.4</div>
-
-
-	<script>
-		function loadSection01(){
-			$("section").load("v01.html");
-			var x = document.getElementById("snackbar-01");
-			x.className = "show";
-			setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-			$(".version").text("Current v0.1");
-		}
-		function loadSection02(){
-			$("section").load("v02.html");
-			var x = document.getElementById("snackbar-02");
-			x.className = "show";
-			setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-			$(".version").text("Version 0.2");
-		}
-		function loadSection03(){
-			$("section").load("v03.html");
-			var x = document.getElementById("snackbar-03");
-			x.className = "show";
-			setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-			$(".version").text("Version 0.3");
-		}
-		function loadSection04(){
-			$("section").load("v04.html");
-			var x = document.getElementById("snackbar-04");
-			x.className = "show"
-			setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-			$(".version").text("Version 0.4");
-		}
-	</script>
 	
+
+	<footer class="footer">
+		<h4>copyrights &copy; <b>Get Lookover<sup><small>TM</small></sup></b>, 2022</h4>
+		<h5><a class="a" href="https://www.facebook.com/groups/664140997952673"><span class="material-symbols margin-right-12px fot-lg">group</span>Facebook Community Group</a></h5>
+	</footer>
+	
+	<script>
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			var versions, i, j, x = "";
+			var versions = JSON.parse(this.responseText);
+			
+			for (i in versions.version) { 
+				x +=`
+				<div class="container-time">
+					<div class="content-time">
+						<h2 style="color:#5a5439;">${versions.version[i].name}</h2>
+						<a class="a" href="${versions.version[i].url_rar}"><span class="material-symbols margin-right-12px fot-lg">download</span>Download RAR</a>
+						<a class="a" href="${versions.version[i].url_rar}"><span class="material-symbols margin-right-12px fot-lg">download</span>Download ZIP</a>
+						<a class="a" href="${versions.version[i].file}"><span class="material-symbols margin-right-12px fot-lg">school</span>Learn</a>
+					</div>
+				</div>
+				`;	 
+			}
+			document.getElementById("releases").innerHTML = x;
+		}
+		};
+		xmlhttp.open("GET", "releases.json", true);
+		xmlhttp.send(); 
+	</script>
 </body>
 
 </html>
