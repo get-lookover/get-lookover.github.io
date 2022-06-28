@@ -6,15 +6,20 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 
-<url>
-  <loc>https://get-lookover.github.io/</loc>
-  <lastmod>2022-06-08T22:20:21+00:00</lastmod>
-</url>
-      
-<url>
-  <loc>https://get-lookover.github.io/index.html</loc>
-  <lastmod>2022-06-08T22:20:21+00:00</lastmod>
-</url>
+      <url>
+        <loc>https://get-lookover.github.io/</loc>
+        <lastmod>2022-06-08T22:20:21+00:00</lastmod>
+      </url>
+
+      <url>
+        <loc>https://get-lookover.github.io/get-lookover-01.html</loc>
+        <lastmod>2022-06-08T22:20:21+00:00</lastmod>
+      </url>
+
+      <url>
+        <loc>https://get-lookover.github.io/get-lookover-05.html</loc>
+        <lastmod>2022-06-08T22:20:21+00:00</lastmod>
+      </url>      
 
 
 </urlset>
